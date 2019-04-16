@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- styles -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Anton" />
+  <link href="assets/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet" type="text/css">
+
+  <title>Jenga Agency | PAYE calculator</title>
+</head>
+
+<body>
+  <div class="header">
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark px-4">
+      <!-- Brand -->
+      <a class="navbar-brand" href="#">
+        <img src="assets/img/Jenga-logo-PNG.png" alt="" class="img-fluid" width="90">
+      </a>
+
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <div class="ml-auto">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">MODULES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">PRICES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">COMPETITORS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">CONTACT US</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </div>
+  <!-- end of header -->
+
+  <div class="container">
+
+    <div class="card my-5 w-75 mx-auto">
+
+      <div class="card-body p-5">
+
+        <h1 class="card-title text-center mt-4 w-75 mx-auto">Kenya Revenue Authority PAYE Calculator</h1>
+
+        <form action="#" onsubmit="calculatePaye();return false">
+
+          <div class="form-group col-md-12 mb-4">
+            <label for="year">Select Tax Year:</label>
+            <select class="form-control" id="year" name="year">
+              <option>2019</option>
+              <option>2018</option>
+              <option>2017</option>
+              <option>2016</option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-12 mb-4">
+              <label for="period">Select Tax Year:</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="period" id="pmonth" value="month" checked>
+                <label class="form-check-label" for="pmonth">
+                  MONTH
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="period" id="pyear" value="year" >
+                <label class="form-check-label" for="pyear">
+                  YEAR
+                </label>
+              </div>
+          </div>
+
+          <div class="form-group col-md-12 mb-4">
+              <label for="basicSalary">Basic Salary:</label>
+              <div class="input-group">
+                <input type="text" class="form-control" id="basicSalary" placeholder="Basic Salary" aria-describedby="inputGroupPrepend" required>
+                <div class="input-group-append">
+                  <span class="input-group-text">KSh</span>
+                </div>
+                <div class="invalid-feedback">
+                  Please enter basic salary.
+                </div>
+              </div>
+          </div>
+
+          <div class="form-group col-md-12 mb-4">
+              <label for="benefits">Benefits In Kind (Bonuses, Allownaces E.g. Credit, Electricity, Water):</label>
+              <div class="input-group">
+                <input type="text" class="form-control" id="benefits" placeholder="0" aria-describedby="inputGroupPrepend" required>
+                <div class="input-group-append">
+                  <span class="input-group-text">KSh</span>
+                </div>
+                <div class="invalid-feedback">
+                  Please choose a username.
+                </div>
+              </div>
+          </div>
+
+          <div class="form-group col-md-12 mb-4">
+              <label for="pension">Deduct NSSF Pension Contribution:</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="pension" id="pyes" value="yes" checked>
+                <label class="form-check-label" for="pyes">
+                  Yes
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="pension" id="pno" value="no" >
+                <label class="form-check-label" for="pno">
+                  No
+                </label>
+              </div>
+          </div>
+
+          <div class="form-group col-md-12 mb-4">
+              <label for="insurance">Deduct NHIF Insurance Contribution:</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="insurance" id="iyes" value="yes" checked>
+                <label class="form-check-label" for="iyes">
+                  Yes
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="pension" id="ino" value="no" >
+                <label class="form-check-label" for="ino">
+                  No
+                </label>
+              </div>
+          </div>
+
+          <div class="form-group col-md-12 mb-4">
+              <label for="housing">Deduct NHDF (National Housing Development Fund) Contribution (1.5%):</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="housing" id="hyes" value="yes" checked>
+                <label class="form-check-label" for="hyes">
+                  Yes
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="housing" id="hno" value="no" >
+                <label class="form-check-label" for="hno">
+                  No
+                </label>
+              </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <button type="submit" class="btn btn-success btn-lg btn-block"><i class="fa fa-plus"></i> Calculate</button>
+            </div>
+
+            <div class="form-group col-md-6">
+              <button type="reset" class="btn btn-danger btn-lg btn-block"> <i class="fa fa-edit"></i> Clear </button>
+            </div>
+          </div>
+
+        </form>
+
+        <div class="results mt-5">
+          <table class="table table-striped">
+
+            <tbody>
+              <tr>
+                <td>INCOME BEFORE PENSION DEDUCTION</td>
+                <td>KSH 0.00</td>
+              </tr>
+              <tr>
+                <td>DEDUCTIBLE NSSF PENSION CONTRIBUTION	</td>
+                <td>KSH 0.00</td>
+              </tr>
+              <tr>
+                <td>INCOME AFTER PENSION DEDUCTIONS</td>
+                <td>KSH 0.00</td>
+              </tr>
+              <tr>
+                <td>BENEFITS IN KIND</td>
+                <td>KSH 0.00</td>
+              </tr>
+              <tr>
+                <td>TAXABLE INCOME</td>
+                <td>KSH 0.00</td>
+              </tr>
+              <tr>
+                <td>PAYE: TAX ON TAXABLE INCOME</td>
+                <td>KSH 0.00</td>
+              </tr>
+              <tr>
+                <td>PERSONAL RELIEF</td>
+                <td>KSH 0.00</td>
+              </tr>
+              <tr>
+                <td>TAX NET OFF RELIEF</td>
+                <td>KSH 0.00</td>
+              </tr>
+              <tr>
+                <td>FACTOR HOUSING</td>
+                <td>KSH 0.00</td>
+              </tr>
+              <tr>
+                <td>TAX PAYABLE (PAYE)</td>
+                <td>KSH 0.00</td>
+              </tr>
+              <tr>
+                <td>CHARGEABLE INCOME</td>
+                <td>KSH 0.00</td>
+              </tr>
+              <tr>
+                <td>NHIF CONTRIBUTION</td>
+                <td>KSH 0.00</td>
+              </tr>
+              <tr>
+                <td>NHDF CONTRIBUTION</td>
+                <td>KSH 0.00</td>
+              </tr>
+              <tr>
+                <td>NET PAY: CARRY HOME PAY</td>
+                <td>KSH 0.00</td>
+              </tr>
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Footer section -->
+  <div class="container-fluid footer py-4">
+
+    <div class="row">
+
+      <div class="col-md-2 col-xs-12 my-auto text-center">
+        <img src="assets/img/Jenga-logo-PNG.png" alt="" class="img-fluid footer-logo">
+      </div>
+
+      <div class="col-md-4 my-auto text-center footer-copyright">
+
+        <span>&copy; Copyright Jenga Tech Solutions Limited 2019</span>
+
+      </div>
+
+      <div class="col-md-6 text-right my-auto footer-links">
+
+        <span class="mx-3" style="font-size: 15px;"><a href="#">JOIN US</a></span>
+
+        <span class="mx-3" style="font-size: 15px;"><a href="#">CONTACT US</a></span>
+
+        <span class="mx-3" style="font-size: 25px;"><a href="mailto:odoo@jenga-agency.com" class="fa fa-envelope"></a></span>
+
+        <span class="mx-3" style="font-size: 25px"><a href="https://www.linkedin.com/company/jenga-agency/about/" class="fa fa-linkedin-square"></a></span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+  <!-- Additionnal Javascript -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="assets/js/main.js"></script>
+  <script type="text/javascript">
+    function calculatePaye(){
+      alert('Test');
+    }
+  </script>
+</body>
+
+</html>
