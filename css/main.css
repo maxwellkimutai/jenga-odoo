@@ -279,7 +279,7 @@ img {
   transition: transform .8s;
 }
 .diagonal-btn:hover::after {
-  transform: translateY(-50%) translateX(60px) rotate(45deg);
+  transform: translateY(-50%) translateX(5em) rotate(45deg);
 }
 
 .ready-partner {
