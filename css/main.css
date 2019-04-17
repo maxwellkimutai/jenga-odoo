@@ -217,7 +217,7 @@ img {
   }
 }
 
-@media only screen and (max-width: 411px) and (min-width: 400px) {
+@media only screen and (max-width: 414px) and (min-width: 400px) {
   .svg{
     top: -19%;
     left: 24%;
@@ -238,10 +238,10 @@ img {
   .payroll-text {
     text-align: center;
   }
-}
-
-@media only screen and (max-width: 1000px) {
-
+  .btn {
+    width: 40% !important;
+    font-size: 50%;
+  }
 }
 
 .process-text:hover {
@@ -319,4 +319,8 @@ button:focus, button:visited, a:focus, a:visited {
   font-size: 50px;
   color: #22B799;
   border-radius: 35px;
+}
+
+.btn {
+  width: 30%;
 }
