@@ -18,6 +18,9 @@
 </head>
 
 <body>
+  <!-- Return to Top -->
+  <i id="return-to-top" class="fas fa-chevron-circle-up"></i>
+
   <div class="header">
 
     <div class="jumbotron p-0">
@@ -37,19 +40,19 @@
           <div class="ml-auto">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="#">ABOUT US</a>
+                <a class="nav-link" href="#about">ABOUT US</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">MODULES</a>
+                <a class="nav-link" href="#modules">MODULES</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">PRICES</a>
+                <a class="nav-link" href="#prices">PRICES</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">COMPETITORS</a>
+                <a class="nav-link" href="#competitors">COMPETITORS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">CONTACT US</a>
+                <a class="nav-link" href="#contact">CONTACT US</a>
               </li>
             </ul>
           </div>
@@ -61,7 +64,7 @@
         <!-- Partner section -->
         <div class="container-fluid h-100 pb-5 partner">
           <div class="row mt-auto ready-partner pb-5 h-100">
-            <div class="col-md-6 col-sm-12 mb-5 pb-5 my-auto">
+            <div class="col-md-6 col-sm-12 mb-5 pb-5 my-auto odoo-hero-logo">
               <img src="img/odoo_logo_inverted.png" alt="" class="img-fluid float-md-right" width="500">
             </div>
             <div class="col-md-6 font-weight-light my-auto" style="font-size: 150%;">
@@ -69,7 +72,7 @@
                 <p><span style="font-size: 240%;">3 MILLION</span> USERS WORLDWIDE</p>
                 <p>100+ COMPANIES USE ODOO IN KENYA</p>
                 <p>PARTNER WITH <span class="font-weight-bold">JENGA</span> TO SET UP ODOO<br /> </p>
-                <a href="#" class="btn btn-green diagonal-btn btn-lg px-5">CONTACT US</a>
+                <a href="#contact" class="btn btn-green diagonal-btn btn-lg px-5">CONTACT US</a>
               </div>
             </div>
           </div>
@@ -80,11 +83,11 @@
     </div>
   </div>
 
+  <a href="" id="about"></a>
   <div class="container-fluid">
     <div class="container">
-
       <!-- About odoo section -->
-      <div class="row">
+      <div class="row about">
         <div class="col-md-12 text-center">
           <span class="font-weight-bold p-50">What is Odoo?</span>
         </div>
@@ -94,6 +97,7 @@
         </div>
       </div>
 
+      <a href="" id="modules"></a>
       <!-- modules section -->
       <div class="row modules my-5">
 
@@ -182,7 +186,8 @@
         <div class="row mx-auto">
           <div class="col-md-12 text-center mx-3 my-auto">
             <div class="d-inline about-jenga-logo">
-              <span class="font-weight-bold" style="font-size: 450%; font-family: 'Anton';">JENGA </span>
+              <!-- <span class="font-weight-bold" style="font-size: 450%; font-family: 'Anton';">JENGA </span> -->
+              <img src="img/Jenga-logo-PNG.png" alt="Jenga logo" width="17%" class="img-fluid">
             </div>
             <div class="d-inline about-arrows">
               <span style="font-size: 480%;">&#8644;</span>
@@ -190,7 +195,7 @@
               <span class="oi oi-arrow-left" title="arrow left" aria-hidden="true" style="position: relative; display: block;"></span> -->
             </div>
             <div class="d-inline h-100 about-odoo-logo">
-              <img src="img/odoo_logo.png" alt="" width="30%" class="img-fluid">
+              <img src="img/odoo_logo.png" alt="Odoo logo" width="25%" class="img-fluid">
             </div>
           </div>
         </div>
@@ -199,7 +204,7 @@
           <div class="col-md-3 text-right payroll-icon">
             <img src="img/hr_icon.png" alt="" class="img-fluid">
           </div>
-          <div class="col-md-9 my-auto">
+          <div class="col-md-9 my-auto payroll-text">
             <p class="">Get the global power of Odoo tailored by Jenga to your African need. For instance, Jenga has developed a custom Kenya Payroll module, including KRA calculations, payslip generation, P9A certificates and many more.</p>
           </div>
 
@@ -207,7 +212,7 @@
       </div>
 
     <div class="container">
-
+      <a href="" id="prices"></a>
       <!-- pricing section -->
       <div class="row pricing my-5">
 
@@ -381,7 +386,7 @@
               </div>
 
               <div class="col-md-12 text-center mt-5 mb-5">
-                <button type="button" name="button" class="btn btn-green diagonal-btn btn-lg px-5">CONTACT US</button>
+                <a href="#contact" class="btn btn-green diagonal-btn btn-lg px-5">CONTACT US</a>
               </div>
 
             </div>
@@ -394,13 +399,14 @@
 
     </div>
 
+
     <!-- Compare section -->
     <div class="container my-5">
 
       <div class="row my-5">
 
         <div class="col-md-12 my-5 text-center">
-
+          <a href="" id="competitors"></a>
           <p class="font-weight-bold p-50">Compare your current softwares to Odoo's integrated modules</p>
           <p class="w-75 mx-auto">No more painful integrations between different softwares. <br> All the features in a one-stop solution. <br> <span class="font-weight-light">With 10,000+ apps in, perfectly integrated to each other, Odoo covers all your business needs and allows you to fully automate your business processes.</span> </p>
         </div>
@@ -417,15 +423,15 @@
         <div class="col-md-6 px-5">
           <img id="quickbooks" src="img/qb_logo.png" alt="" width="100">
           <a href="https://www.odoo.com/page/compare-odoo-vs-quickbooks" class="btn btn-green diagonal-btn float-right px-5 py-2">Compare</a>
-          <hr style="border-top: .05em solid #8E908E;">
+          <hr style="border-top: .07em solid #8E908E;">
 
           <img id="xero" src="img/xero_logo.png" alt="" width="50" class="ml-4">
           <a href="https://www.odoo.com/page/compare-odoo-vs-xero" class="btn btn-green diagonal-btn float-right mt-2 px-5 py-2">Compare</a>
-          <hr style="border-top: .05em solid #8E908E;">
+          <hr style="border-top: .07em solid #8E908E;">
 
           <img id="sage" src="img/sage_logo.svg" alt="" width="100">
           <a href="https://www.odoo.com/page/compare-odoo-vs-sage-accounting" class="btn btn-green diagonal-btn float-right px-5 py-2">Compare</a>
-          <hr style="border-top: .05em solid #8E908E;">
+          <hr style="border-top: .07em solid #8E908E;">
         </div>
 
       </div>
@@ -440,19 +446,19 @@
         <div class="col-md-6 px-5">
           <img id="piperdrive" src="img/pipedrive_logo.png" alt="" width="100" class="mb-2 pt-2">
           <a href="https://www.odoo.com/page/compare-odoo-vs-pipedrive" class="btn btn-green diagonal-btn float-right px-5 py-2">Compare</a>
-          <hr style="border-top: .05em solid #8E908E;">
+          <hr style="border-top: .07em solid #8E908E;">
 
           <img id="zoho" src="img/zoho_logo.png" alt="" width="100">
           <a href="https://www.odoo.com/page/compare-odoo-vs-zohocrm" class="btn btn-green diagonal-btn float-right px-5 py-2">Compare</a>
-          <hr style="border-top: .05em solid #8E908E;">
+          <hr style="border-top: .07em solid #8E908E;">
 
           <img id="sugarcrm" src="img/sugarcrm_logo.svg" alt="" width="150" class="mb-2 pt-3">
           <a href="https://www.odoo.com/page/compare-odoo-vs-sugarcrm" class="btn btn-green diagonal-btn float-right mt-0 px-5 py-2">Compare</a>
-          <hr style="border-top: .05em solid #8E908E;">
+          <hr style="border-top: .07em solid #8E908E;">
 
           <img id="salesforce" src="img/salesforce_logo.svg" alt="" width="100">
           <a href="https://www.odoo.com/page/compare-odoo-vs-salesforce" class="btn btn-green diagonal-btn float-right mt-3 px-5 py-2">Compare</a>
-          <hr style="border-top: .05em solid #8E908E;">
+          <hr style="border-top: .07em solid #8E908E;">
         </div>
 
       </div>
@@ -469,15 +475,15 @@
         <div class="col-md-6 px-5">
           <img id="netsuit" src="img/netsuit_logo.png" alt="" width="100">
           <a href="https://www.odoo.com/page/compare-odoo-vs-netsuite-mrp" class="btn btn-green diagonal-btn float-right mt-4 px-5 py-2">Compare</a>
-          <hr style="border-top: .05em solid #8E908E;">
+          <hr style="border-top: .07em solid #8E908E;">
 
           <img id="msdynamics" src="img/msdynamics_logo.png" alt="" width="100">
           <a href="https://www.odoo.com/page/compare-odoo-vs-dynamics-ax" class="btn btn-green diagonal-btn float-right mt-2 px-5 py-2">Compare</a>
-          <hr style="border-top: .05em solid #8E908E;">
+          <hr style="border-top: .07em solid #8E908E;">
 
           <img id="sap" src="img/sap_logo.png" alt="" width="150">
           <a href="https://www.odoo.com/page/compare-odoo-vs-sap" class="btn btn-green diagonal-btn float-right px-5 py-2">Compare</a>
-          <hr style="border-top: .05em solid #8E908E;">
+          <hr style="border-top: .07em solid #8E908E;">
 
         </div>
 
@@ -505,6 +511,8 @@
 
     </div>
 
+    <!-- contact section -->
+    <a href="" id="contact"></a>
     <div class="container">
 
       <div class="row contact px-5 my-5 py-5 text-center">
@@ -584,9 +592,9 @@
 
       <div class="col-md-6 text-right my-auto footer-links">
 
-        <span class="mx-3" style="font-size: 90%;"><a href="#">JOIN US</a></span>
+        <span class="mx-3" style="font-size: 90%;"><a href="https://jenga-agency.com/join">JOIN US</a></span>
 
-        <span class="mx-3" style="font-size: 90%;"><a href="#">CONTACT US</a></span>
+        <span class="mx-3" style="font-size: 90%;"><a href="#contact">CONTACT US</a></span>
 
         <span class="mx-3" style="font-size: 150%;"><a href="mailto:odoo@jenga-agency.com" class="fas fa-envelope"> </a></span>
 
