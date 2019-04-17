@@ -210,13 +210,15 @@ img {
   .cost-text {
     font-size: 60%;
   }
-
 }
 
 @media only screen and (max-width: 375px) and (min-width: 350px) {
   .svg{
     top: -19%;
     left: 23%;
+  }
+  .cost-text {
+    font-size: 60%;
   }
 }
 
@@ -232,6 +234,9 @@ img {
     top: -19%;
     left: 19%;
   }
+  .cost-text {
+    font-size: 60%;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -241,11 +246,12 @@ img {
   .payroll-text {
     text-align: center;
   }
-  .btn {
-    width: 40% !important;
-    font-size: 50%;
-  }
+  /* .btn {
+    width: 100%;
+    font-size: 100%;
+  } */
 }
+
 
 .process-text:hover {
   color: #CC5490;
@@ -324,6 +330,6 @@ button:focus, button:visited, a:focus, a:visited {
   border-radius: 35px;
 }
 
-.btn {
-  width: 30%;
+.btn-stretched{
+  width: 40%;
 }
