@@ -207,6 +207,9 @@ img {
     left: 6%;
     top: -16%;
   }
+  .cost-text {
+    font-size: 60%;
+  }
 
 }
 
